@@ -1,1 +1,71 @@
-@import url("./global.less");
+@import url("../../../global.less");
+
+#wall_dashboard_container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+
+    #message_container{
+        background: #fff;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.05);
+        margin: 50px auto;
+        max-width: 1281px;
+        min-height: 1035px;
+        padding-bottom: 50px;
+        width: 100%;
+
+        header {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            margin: 70px 70px 30px 68px;
+
+            p{
+                color: @grey;
+                font: 400 16px/24px @Poppins;
+
+                #message_counter{
+                    color: @primary;
+                    font: 600 16px/24px @Poppins;
+                }
+            }
+            
+            #create_message_btn{
+                background-color: @primary;
+                border-radius: @border_radius_6;
+                border: 0;
+                color: @white;
+                cursor: pointer;
+                font: 500 16px/24px @Poppins;
+                height: 38px;
+                width: 190px;
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+        }
+
+        #no_message_inbox {
+            margin-top: 103px;
+            text-align: center;
+
+            p{
+                color: @grey;
+                font: 400 16px/24px @Poppins;
+            }
+
+            img {
+                margin-bottom: 20px;
+            }
+        }
+
+        #message_list{
+            list-style-type: none;
+        }
+
+        .inactive_display{
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,174 @@
+@import url("../../../global.less");
+
+.modal {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+
+    .modal_content{
+        border-radius: @border_radius_6;
+        background-color: @white;
+        .modal_header{
+            display: flex;
+            height: 37px;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 20px 20px 0;
+            .close_btn{
+                background: none;
+                border: 0;
+                cursor: pointer;
+                &:hover{
+                    opacity: 0.8;
+                }
+                &::before{
+                    background: url("../../../assets/icons/the_wall_icons.svg") no-repeat -90px -3px;
+                    content: "";
+                    display: block;
+                    height: 23px;
+                    width: 23px;
+                }
+            }
+        }
+        .modal_body{
+            height: fit-content;
+        }
+    }
+
+    .create_message{
+        height: 423px;
+        width: 937px;
+
+        .modal_body{
+            display: flex;
+            flex-direction: column;
+            padding: 0 50px;
+            width: 100%;
+
+            h2{
+                font: 500 26px/39px @Poppins;
+                color: @text_color;
+                margin: 14px auto 40px;
+            }
+            
+            textarea{
+                background-color: @input_bg;
+                border-radius: @border_radius_6;
+                border: 0;
+                color: @text_color;
+                font: 300 16px/24px @Poppins;
+                height: 185px;
+                margin-bottom: 30px;
+                padding: 10px;
+                resize: none;
+                width: 100%;
+
+                &::placeholder{
+                    color: @placeholder;
+                }
+                &:focus{
+                    outline: 0;
+                }
+            }
+        }
+        .modal_footer{
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            height: 88px;
+            justify-content: flex-end;
+            padding: 0 50px 50px;
+
+            #cancel_btn, #submit_create_msg_btn{
+                border-radius: @border_radius_4;
+                border: 0;
+                color: @white;
+                cursor: pointer;
+                font: 16px/24px @Poppins;
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+    
+            #cancel_btn{
+                background: none;
+                color: @light_black;
+            }
+    
+            #submit_create_msg_btn{
+                background-color: @primary;
+                font-weight: 500;
+                height: 38px;
+                width: 190px;
+                &:disabled{
+                    cursor: not-allowed;
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+
+    .delete_comment, .delete_message{
+        height: 307px;
+        width: 540px;
+
+        .modal_body{
+            text-align: center;
+            h2{
+                color: @text_color;
+                font: 500 26px/39px @Poppins;
+                margin: 19px auto 42px;
+            }
+            p{
+                color: @text_color;
+                font: 400 16px/24px @Poppins;
+                margin: 0 0 40px;
+                span{
+                    display: block;
+                }
+            }
+        }
+
+        .modal_footer{
+            align-items: first baseline;
+            display: flex;
+            flex-wrap: wrap;
+            height: 80px;
+            justify-content: center;
+            padding: 0 50px;
+
+            #cancel_btn, #delete_comment_btn, #delete_message_btn{
+                border-radius: @border_radius_4;
+                border: 0;
+                color: @white;
+                cursor: pointer;
+                font: 16px/24px @Poppins;
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+    
+            #cancel_btn{
+                background: none;
+                color: @light_black;
+                width: 210px;
+            }
+    
+            #delete_comment_btn, #delete_message_btn{
+                background-color: @primary;
+                font-weight: 500;
+                height: 46px;
+                width: 210px;
+            }
+        }
+    }
+}

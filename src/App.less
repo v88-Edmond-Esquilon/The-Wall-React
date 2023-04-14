@@ -1,1 +1,35 @@
 @import url("./global.less");
+
+#wrapper {
+    display: flex;
+    min-width: 1440px;
+    min-height: 1035px;
+    .image_container {
+        align-items: center;
+        background: @image_bg;
+        display: flex;
+        height: 100vh;
+        position: relative;
+        width: 583px;
+        
+        img {
+            left: -67px;
+            position: absolute;
+        }
+    }
+    .inactive_container{
+        display: none;
+    }
+    
+    a{
+        text-decoration: none;
+    }
+    .error_input{
+        background-color: @error_bg !important;
+    }
+    .error_message{
+        color: @input_error;
+        font: 300 14px/21px @Poppins;
+        margin-top: 10px;
+    }
+}

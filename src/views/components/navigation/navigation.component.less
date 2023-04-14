@@ -1,1 +1,26 @@
-@import url("./global.less");
+@import url("../../../global.less");
+
+#nav_bar{
+    align-items: center;
+    background-color: @white;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    padding: 39px 84px 39px 70px;
+    width: 100%;
+
+    a{
+        font: 500 26px/39px @Poppins;
+        color: @text_color;
+    }
+
+    p{
+        font: 300 16px/24px @Poppins;
+        color: @text_color;
+        a{
+            font: 600 16px/24px @Poppins;
+            color: @primary;
+            margin-left: 18px;
+        }
+    }
+}

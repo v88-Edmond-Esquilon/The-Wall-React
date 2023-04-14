@@ -1,1 +1,115 @@
-@import url("./global.less");
+@import url("../../../global.less");
+
+
+.comment_item{
+    border: 1px solid @border_solid;
+    margin: 27px 0 20px;
+    padding: 30px;
+
+    .comment_text{
+        color: @text_color;
+        font: 300 16px/24px @Poppins;
+    }
+
+    div .action_controls{
+        column-gap: 30px;
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        margin-top: 25px;
+
+        li{
+            align-items: center;
+            cursor: pointer;
+            display: flex;
+            font: 400 16px/24px @Poppins;
+            &:hover{
+                opacity: 0.8;
+            }
+            .comment_counter{
+                margin-right: 5px;
+            }
+            &::before{
+                align-items: center;
+                content: "";
+                display: flex;
+                height: 24px;
+                margin-right: 7px;
+                width: 24px;
+            }
+        }
+
+        .edit_btn{
+            color: @primary;
+            &::before{
+                background: url("../../../assets/icons/the_wall_icons.svg") no-repeat -30px -3px;
+            }
+        }
+        .delete_btn{
+            color: @light_black;
+            &::before{
+                background: url("../../../assets/icons/the_wall_icons.svg") no-repeat -60px -3px;
+            }
+        }
+
+        .profile_btn{
+            color: @grey;
+            span{
+                color: @light_black;
+                font-weight: 500;
+                margin-right: 5px;
+            }
+            &::before{
+                background: url("../../../assets/icons/profile_icon.svg") no-repeat 0px 0px;
+            }
+        }
+    }
+
+    #update_comment_form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: flex-end;
+
+        textarea{
+            background-color: @input_bg;
+            border: 1px solid @border_solid;
+            color: @text_color;
+            font: 300 16px/24px @Poppins;
+            height: 84px;
+            padding: 10px;
+            resize: none;
+            width: 100%;
+            &:focus{
+                outline: 0;
+            }
+        }
+
+        .cancel_btn, .update_comment_btn{
+            border-radius: @border_radius_4;
+            border: 0;
+            color: @white;
+            cursor: pointer;
+            font: 16px/24px @Poppins;
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+
+        .cancel_btn{
+            background: none;
+            color: @light_black;
+        }
+
+        .update_comment_btn{
+            background-color: @primary;
+            font-weight: 500;
+            height: 38px;
+            width: 190px;
+            &:disabled{
+                cursor: not-allowed;
+                opacity: 0.5;
+            }
+        }
+    }
+}
