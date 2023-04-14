@@ -1,25 +1,17 @@
 /** React */
-import React from "react";
+import React                        from "react";
 /** Components */
-import { 
-        MessageList,
-        NavBar 
-    } from "../../components";
+import { MessageList, NavBar }      from "../../components";
 import { 
         DeleteCommentModal,
         DeleteMessageModal,
         CreateMessageModal
     } from "../../modals";
 /** Redux */
-import { 
-        useSelector,
-        useDispatch
-    } from "react-redux";
-import { 
-        wallDashboardState
-    } from "../../../_actions/wall_dashboard.actions";
+import { useSelector, useDispatch } from "react-redux";
+import { wallDashboardState }       from "../../../_actions/wall_dashboard.actions";
 /** Image */
-import NoMessageImg from "../../../assets/images/empty_inbox.svg";
+import NoMessageImg                 from "../../../assets/images/empty_inbox.svg";
 import "./wall_dashboard.less";
 
 export default function WallDashboard() {
@@ -31,8 +23,6 @@ export default function WallDashboard() {
         }} = useSelector(state => state);
     const dispatch = useDispatch();
 
-
-
     return (
         <div id="wall_dashboard_container">
             <NavBar/>
@@ -40,9 +30,9 @@ export default function WallDashboard() {
                 <header>
                     <p><span id="message_counter">{message_list.length}</span> messages arranged by latest posted</p>
                     <button 
-                        onClick={() => dispatch(wallDashboardState.toggleCreateModal(true))} 
                         id="create_message_btn" 
                         type="button"
+                        onClick={() => dispatch(wallDashboardState.toggleCreateModal(true))} 
                     > Create Message
                     </button>
                 </header>

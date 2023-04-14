@@ -5,7 +5,7 @@ export interface wallDashboard {
     toggle_create_message_modal: boolean;
     toggle_delete_message_modal: boolean;
     toggle_delete_comment_modal: boolean;
-    message_list: Array<any>;
+    message_list: any[];
     selected_message_id: string;
     selected_comment_id: string;
 }

@@ -1,4 +1,16 @@
-import { toggleCreateModal, addMessage, updateMessage, toggleDeleteMessageModal, setSelectedMessageId, setSelectedCommentId, deleteMessage, addComment, toggleDeleteCommentModal, deleteComment, updateComment } from "../_reducers/wall_dashboard.reducer"
+import { 
+        addComment,
+        addMessage,
+        deleteComment,
+        deleteMessage, 
+        setSelectedCommentId,
+        setSelectedMessageId, 
+        toggleCreateModal,
+        toggleDeleteCommentModal, 
+        toggleDeleteMessageModal, 
+        updateComment, 
+        updateMessage,
+    } from "../_reducers/wall_dashboard.reducer"
 
 export const wallDashboardState = {
     toggleCreateModal: (params) => {
